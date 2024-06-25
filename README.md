@@ -52,9 +52,23 @@ Distributes the workload of matrix multiplication across multiple processes, all
 Each process sends its rank to the following process in a ring-like fashion.
 
 #### 6. nblock.c
-Each process calculates a different power of the received number 'x' (here, x = 10). For example, process 1 calculates \(10^1\), process 2 calculates \(10^2\), process 3 calculates \(10^3\), and so on.
+Each process calculates a different power of the received number 'x' (here, x = 10). For example, process 1 calculates 10<sup>1</sup>, process 2 calculates 10<sup>2</sup>, process 3 calculates 10<sup>3</sup>, and so on.
 
 ### Collective Communication
 
 #### 7. coll.c
 This program initializes the number of elements (here, 12). The number of processors should be less than the number of elements. The program uses `MPI_Scatterv` to distribute distinct portions of data to different processors and then uses `MPI_Reduce` to sum them up on the root processor (0th processor).
+
+Here is the modified part of the README script:
+
+---
+
+You may also refer to the following:
+
+Architecture - Applications: 
+[https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial](https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial)
+
+MPI:
+[https://hpc-tutorials.llnl.gov/mpi/](https://hpc-tutorials.llnl.gov/mpi/)
+
+---

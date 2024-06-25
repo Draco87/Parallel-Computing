@@ -59,8 +59,6 @@ Each process calculates a different power of the received number 'x' (here, x = 
 #### 7. coll.c
 This program initializes the number of elements (here, 12). The number of processors should be less than the number of elements. The program uses `MPI_Scatterv` to distribute distinct portions of data to different processors and then uses `MPI_Reduce` to sum them up on the root processor (0th processor).
 
-Here is the modified part of the README script:
-
 ---
 
 You may also refer to the following:
